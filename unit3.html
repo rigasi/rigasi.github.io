@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html><head><!--
+<html><head>
+<!--
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
@@ -26,28 +27,71 @@
 </big></big></big></big></h1>
 <div class="content">
 								<br>
-<p>In unit 3 different approached to threat modelling were introduced.
-I was mostly aware of STRIDE and DREAD but I have never used attack
-trees or PASTA. <br>
+<p>In unit 3 we were introduced to programming languages , their
+history and concepts but also on buffer overflow activities.
+Additionally there was a team activity discussion on the security of
+programming languages and on whether python is a secure programming
+language.During unit 3 preparatory work on the design document for the team project was also carried out as shown below.  <br>
 </p>
-<p>The Threat Modeling Manifesto (Shostack et al, 2020) was an
-interesting adaptation of the agile manifesto in risk management
-processes whereas the paper by Shevchenko et al (2018) offered a very
-interesting summary of threat modelling methods which can be used in
-different parts of development processes. The threat modelling tool by
-microsoft is a free platform which can be used for carrying out threat
-modelling activities. I
-played around quite a bit with it and I used it in a couple of threat
-modelling exercises at work with good results overall. I am sure there
-are other tools out there with great capabilities but this was a kind
-of free of charge solution for playing around with threat modelling.
-Reflecting on unit 3 I think that I do understand the differences
-between the threat modelling methods but I certainly need to play
-around with the tools and try to apply each one of them in a particular
-situation to internalise the mechanisms behind them and get a better
-understanding of what can be used and where. <br>
+<p><span style="font-weight: bold;">Buffer Overflow Activity</span><br>
 </p>
-<p><img style="width: 1426px; height: 705px;" src="images/moz-screenshot.jpg" alt=""></p>
+<p>Running the Python overflow file we can clearly see that there is an
+IndexError (an overflow) as the for loop index is moving out of range.
+Looking into the output of pylint we can see that no error is raised as
+pylint does not check the logic of the for loop.</p>
+<br>
+<p><img style="width: 837px; height: 165px;" alt="" src="images/pylint.png"></p>
+Running the file we can see the overflow<br>
+<img style="width: 538px; height: 135px;" alt="" src="images/overflow4.png"><br>
+Which can be corrected by changing the index within limits<br>
+<br>
+<img style="width: 392px; height: 135px;" alt="" src="images/overflow3.png"><br>
+<br>
+<span style="font-weight: bold;">Development Team Project: Design Document</span><br>
+For developing the team project the team was assembled and we created the necessary workspace to work together as shown below.<br>
+<img style="width: 961px; height: 583px;" alt="" src="images/assign1.png"><br>
+<br>
+I volunteered on the task of analysing the proposed design using the
+STRIDE framework in combination with RTMP , rapid threat model
+prototyping technique (Hill,2022) to identify quickly zones of trust
+and access level zones based on the trust boundaries of the system
+design. Subsequently threats are identified by applying STRIDE and in
+combination with OWASP's top ten adequate technical controls and
+mitigations are planned.<br>
+<br>
+<img style="width: 936px; height: 822px;" alt="" src="images/diagram.png"><br>
+<br>
+References<br>
+<br>
+Chapple, M; Steward, J. M.; and Gibson, D (2021). CISSP Certified
+Information Systems Security Professional – Official Study Guide – 9th
+Edition, John Wiley &amp; Sons, Inc, 1250 pages.<br>
+<br>
+Hill, G. (2022). Rapid Threat Model Prototyping. Available from:
+https://github.com/geoffrey-hill-tutamantic/rapid-threat-model-prototyping-docs
+[Accessed 20 November 2022].<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<p><br>
+</p><br>
+<p><br>
+</p>
+<p><br>
+</p>
+
+<p><br>
+</p>
 
 
 <p><br>

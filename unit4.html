@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html><head><!--
+<html><head>
+<!--
 	Forty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
@@ -26,92 +27,103 @@
 </big></big></big></big></h1>
 <div class="content">
 								<br>
-<p>In unit 4 we looked into various tools and resources used in threat
-modelling and management and applied those in different scenarios
-through the seminar activities.Additional to the models described in unit 3 the OWASP threat modelling cookbook was presented. 
-There was wide discussion on qualitative vs quantitative methods and
-the introducion of Open FAIR, Octave, ISO and NIST frameworks.&nbsp;</p>Unit 4 Activity<br>
-Read Shostack (2018) chapters 3 – 5 (that cover STRIDE and DREAD,
-Attack Trees and Attack libraries) as well as Spring et al (2021) (that
-discusses the history and some failings with CVSS) and then create a
-threat model based on one of the following scenarios:<br>
+<p>The focus of unit 4 was on testing code and software in a structured and efficient way with a strong focus on security. Additionally
+activities around linters and cyclomatic complexity were carried out as
+well as the seminar 2 preparation activities on cryptography.</p>Seminar 2 preparation activity - Cryptography
+<p>For this activity I chose to implement a 2048 RSA algorithm
+implemented in python based on the example listed in
+tutorialpoints.com. I chose RSA because I wanted to practive hands on
+with assymetric encryption, a concept which always confused me in
+theory. I created a short text file in codio and adjusted the original
+code to use a 2048bits long key in order to make it more secure and
+potentially useful in a GDPR application. The relevant parts of the
+code and the output can be seen below:</p>
 <br>
-- A large international airport based in the United States of America.<br>
-- A large international bank based in the UK.<br>
-- A large nuclear power station in France.<br>
+<p><img style="width: 1139px; height: 722px;" alt="" src="images/rsacode.png"></p>
+<p>And running the program:</p>
 <br>
-For this activity I chose a somewhat courageous scenario based on a
-large international airport in the USA. In the particular example I did
-not focus on IT but on security and the objective of the attack is to
-board a plane with a 3D printed firearm. I wrote this attack tree after
-reading <a href="https://time.com/5356179/3d-printed-guns-tsa/">this</a>
-article stating that the TSA has found 3D printed guns at airport
-checkpoints 4 times since 2016. As I have a background in the industry
-I decided to try to map a potential attack on the attack tree below. It
-was an interesting exercise as I thought that I can quickly create such
-a diagram without too much effort but as I started drawing I started
-thinking about the different attack vectors and interdependencies
-between actors in the system and then I came up with much more content
-than what I originally thought. I was luckly that I picked a relatively
-simple scenario which resulted in somewhat decent tree and not
-something extremely complex which could extend over several pages. At
-the end of the day it didnt matter at all that the context was not IT
-as through the exercise I think I understood how powerfull can attack
-trees be. <br>
+<p><img style="width: 1544px; height: 192px;" alt="" src="images/rsarun.png"></p>
+<p style="font-weight: bold;">Linters Activity</p>
 <br>
-<img style="width: 1202px; height: 635px;" alt="" src="images/firearm.png"><br>
-<p>Description:</p>
-<p>The two main branches of the tree are either an individual bringing
-a 3D firearm onboard illegaly himself or having an accomplish working
-as an insider in the airport and bringing the firearm to our passenger
-after he goes through security. In the first case there is the obvious
-difficulty of acquiring such a firearm as it either needs to be bought
-or constructed using advanced 3D printer devices. The latter is
-preferred as 3D firearms contain some metalic parts which would trigger
-a metal detector. Note that in this scenario the functioning of the
-firearm is not of concern, a 3D printed gun could potentially be used
-to hijack a plane by taking hostage a passenger and it is quite likely
-that a properly 3D printed firearm can fire at least once succesfully
-injuring or killing a passenger. <br>
+<p><span style="font-weight: bold;">Question 1</span><br>
+Run styleLint.py in Codio.<br>
+<br>
+What happens when the code is run? Can you modify this code for a more
+favourable outcome? What amendments have you made to the code?</p>
+Answer: The code was amended with proper indentation for python. <br>
+<p><img style="width: 780px; height: 552px;" alt="" src="images/lintQ1.png"></p>
+<span style="font-weight: bold;">Question 2</span><br>
+<p><br>
+"pip install pylint<br>
+Run<br>
+pylint <br>
+on pylintTest.py<br>
+Review each of the code errors returned. Can you correct each of the errors identified by pylint?<br>
+Before correcting the code errors, save the pylintTest.py file with a new name (it will be needed again in the next question)."</p>
+<p>Unfortunately it was not possible to install pylint due to the following error, Q2 was not completed.<br>
 </p>
-Modern airports use a mixture of security gates including metal
-detector ones and advanced imaging ones. The latter can detect a 3D
-printed firearm but the metal detector ones can only detect one if it
-contains metalic parts. The passenger needs to be lucky enough to avoid
-also the random sampling check as metal detectors will every few rounds
-beep a false positive to enforce a manual check by security
-staff.&nbsp; <br>
 <br>
-The second branch presuposses the existence of an insider which brings
-the firearm to out passenger after the passenger goes through security
-checks. This is also not easy as employees are also screened with metal
-detectors and other devices and they are also subjected to background
-checks and security clearances. The alternative would be for the
-insider to violate the physical security of the airside by throwing for
-example the firearm over the fence or finding another way to bring it
-inside undetected. CCTV, fences, patrols, and surveillance of the
-perimeter are some effective countermeasures. Additionally we can also
-consider that a typical employee working inside the airport (eg.
-check-in agent) would have great difficulty walking undetected to the
-fence to pick up a firearm which he dropped before his shift started. <br>
+<p><img style="width: 787px; height: 566px;" alt="" src="images/lintQ2.png"></p>
+<p>Question 3<br>
+Run flake8 on pylintTest.py<br>
 <br>
-The most probable scenario would be for a passenger printing his own 3d
-firearm , going to the airport and selecting a queue in which there is
-a simple metal detector and not an advanced imaging scanner. Then he
-would only have to be lucky to avoid the random sampling of the metal
-detector. <br>
+Review the errors returned. In what way does this error message differ from the error message returned by pylint?<br>
+</p>
+<p>--&gt; the pylint exercise was not run due to installation issues, but as shown below the indentation errors were corrected:</p>
+<p><img style="width: 869px; height: 520px;" alt="" src="images/lintQ3.png"><br>
+</p>
+<br>
+<p>Run flake8 on metricTest.py. Can you correct each of the errors returned by flake8? What amendments have you made to the code?</p>
+<br>
+<p><img style="width: 836px; height: 548px;" alt="" src="images/lintQ4.png"></p>
+<br>
+<p>Multiple indentation issues were encountered in the code and after
+several formating changes no errors are shown. Of course flake 8 does
+not check for logical errors in the code itself. <br>
+</p>
+<br>
+<p><span style="font-weight: bold;">Question 4</span></p>
+<p><span style="font-weight: bold;">U</span>nfortunately it was not possible to run mccabe on codio or locally due to the following error.:<br>
+</p>
+<img style="width: 1158px; height: 381px;" alt="" src="images/mccabe.png">
+<p>However radon was installed and used instead. We can expect tha
+cyclomatic complexity will be identical as both programs contain one if
+statement despite sums2 performing two calculations. Our expectation is
+confirmed by randon calculating the same cc for both files as shown
+below:</p>
+<img style="width: 956px; height: 398px;" alt="" src="images/radon.png"><br>
+<br>
+<p>Question 5</p>
+Today Cyclomatic Complexity is commonly considered in modules on
+testing the validity of code design today. However, in your opinion,
+should it be? Does it remain relevant today? Specific to the focus of
+this module, is it relevant in our quest to develop secure software?
+Justify all opinions which support your argument and share your
+responses with your team.<br>
+<br>
+CC can be a usefule metric but it needs to be considered within the
+context of the code in which it is examined. Other metrics such as
+number of lines of code can also be useful. CC as every such
+methodology can suffer from weaknesses and has been subjected to
+criticism. Some of it most probably stems from the generic difficulty
+of creating a general complexity metric by relying on properties of a
+specific program considering the vast range of programming
+environments, software development methodologies, and programming
+practices in general. To use a simple example , breaking a program into
+different functions can lead to a higher cc score but in reality such
+modularisation might decrease software complexity (Shepperd, 1988).
+This is just an example to show how contested the usage of metrics can
+become. On the other hand and considering such weaknesses such metrics
+can become useful indicators of complexity and potentially used in
+combination with eachother. Consequently, we could say that such
+metrics are still applicable today and they can be used to estimate
+complexity and maintainability but at the same time they should be used
+with an awarenes regarding their limitations. <br>
+<br>
+<span style="font-weight: bold;">References</span><br>
+Shepperd, M. (1988) A critique of cyclomatic complexity as a software metric, Software Engineering Journal 1988<br>
 <p><br>
 </p>
-
-<p>References</p>Bartholomew, E (2010). Airport And Aviation Security, CRC Press Taylor and Francis Group. USA.<br>
-<br>
-<p>Qualls, K. (2018). TSA Confident It Can Detect 3D-Printed ‘Ghost
-Guns’, https://theglobepost.com/2018/08/03/tsa-3d-printed-guns/
-[Accessed on 04/05/2022]</p>
-<p><br>
-</p>
-
-<br>
 <p><br>
 </p>
 <br>
