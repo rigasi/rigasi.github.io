@@ -11,6 +11,8 @@
 
 
 
+
+
 	
 		
 		<meta charset="utf-8">
@@ -27,101 +29,68 @@
 </big></big></big></big></h1>
 <div class="content">
 								<br>
-<p>The focus of unit 4 was on testing code and software in a structured and efficient way with a strong focus on security. Additionally
-activities around linters and cyclomatic complexity were carried out as
-well as the seminar 2 preparation activities on cryptography.</p>Seminar 2 preparation activity - Cryptography
-<p>For this activity I chose to implement a 2048 RSA algorithm
-implemented in python based on the example listed in
-tutorialpoints.com. I chose RSA because I wanted to practive hands on
-with assymetric encryption, a concept which always confused me in
-theory. I created a short text file in codio and adjusted the original
-code to use a 2048bits long key in order to make it more secure and
-potentially useful in a GDPR application. The relevant parts of the
-code and the output can be seen below:</p>
+<p>The focus of unit 4 was on case studies, focus groups and
+observations as data collection methods for mostly qualitative research.</p>
+<p>As activity material there was a case study on privacy which was also discussed on the seminar.&nbsp;</p>
+<h3><big>Privacy Case Study<br>
+</big></h3>
+<small><small><small>Ricardo works for the records department of his
+local government as a computer records clerk, where he has access to
+files of property tax records. For a scientific study, a researcher,
+Beth, has been granted access to the numerical portion “but not the
+corresponding names” of some records.<br>
 <br>
-<p><img style="width: 1139px; height: 722px;" alt="" src="images/rsacode.png"></p>
-<p>And running the program:</p>
+Beth finds some information that she would like to use, but she needs
+the names and addresses corresponding with certain properties. Beth
+asks Ricardo to retrieve these names and addresses, so she can contact
+these people for more information and for permission to do further
+study.<br>
+<br style="font-weight: bold;">
+<span style="font-style: italic;">Now consider, what are the ethical issues involved in deciding which of these options to pursue?</span><br style="font-style: italic;">
+<br style="font-style: italic;">
+<span style="font-style: italic;">If Ricardo is not responsible for determining allowable access, should he release the names and addresses?</span><br>
 <br>
-<p><img style="width: 1544px; height: 192px;" alt="" src="images/rsarun.png"></p>
-<p style="font-weight: bold;">Linters Activity</p>
+As Ricardo is not responsible for determining allowable access he
+should not release any related info such as the names and addresses as
+this would violate a number of privacy provisions , including GDPR
+provisions on data processing. <br>
 <br>
-<p><span style="font-weight: bold;">Question 1</span><br>
-Run styleLint.py in Codio.<br>
+<span style="font-style: italic; font-weight: bold;">Suppose Ricardo
+were responsible for determining allowable access to the files. What
+ethical issues would be involved in his deciding whether to grant
+access to Beth?</span><br>
 <br>
-What happens when the code is run? Can you modify this code for a more
-favourable outcome? What amendments have you made to the code?</p>
-Answer: The code was amended with proper indentation for python. <br>
-<p><img style="width: 780px; height: 552px;" alt="" src="images/lintQ1.png"></p>
-<span style="font-weight: bold;">Question 2</span><br>
+If Ricardo is responsible for determining allowable access to the files
+it does not mean that he has the right and authority to disclose data.
+These are two very distinctive ideas. For Ricardo to disclose data
+there must be a process in place which legitimises sharing of data and
+sets the conditions for it. It could be possible for example to share
+data in an anonymised form or any other <br>
+<br>
+<span style="font-style: italic; font-weight: bold;">Should Beth be
+allowed to contact the individuals involved? That is, should the
+Records department release individuals' names to a researcher? What are
+the ethical issues for the Records department to consider?</span><br>
+<br>
+No, Beth should not contact the individuals as she is not authorised to
+obtain their data and individuals have not given their consent. <br>
+<br>
+<span style="font-weight: bold;">Suppose Beth contacts the individuals
+to ask their permission, and one-third of them respond giving
+permission, one-third respond denying permission, and one-third do not
+respond. Beth claims that at least one-half of the individuals are
+needed to make a valid study. What options are available to Beth?</span></small></small></small><br>
+<br>
+The data can be used only for the purpose for which they have been
+collected, Beth cannot use any of the data as their is no consent. She
+cannot contact them to get additional approval as she has no right to
+use their data for contacting them. <br>
+<br>
 <p><br>
-"pip install pylint<br>
-Run<br>
-pylint <br>
-on pylintTest.py<br>
-Review each of the code errors returned. Can you correct each of the errors identified by pylint?<br>
-Before correcting the code errors, save the pylintTest.py file with a new name (it will be needed again in the next question)."</p>
-<p>Unfortunately it was not possible to install pylint due to the following error, Q2 was not completed.<br>
+</p>
+<p><br>
 </p>
 <br>
-<p><img style="width: 787px; height: 566px;" alt="" src="images/lintQ2.png"></p>
-<p>Question 3<br>
-Run flake8 on pylintTest.py<br>
-<br>
-Review the errors returned. In what way does this error message differ from the error message returned by pylint?<br>
-</p>
-<p>--&gt; the pylint exercise was not run due to installation issues, but as shown below the indentation errors were corrected:</p>
-<p><img style="width: 869px; height: 520px;" alt="" src="images/lintQ3.png"><br>
-</p>
-<br>
-<p>Run flake8 on metricTest.py. Can you correct each of the errors returned by flake8? What amendments have you made to the code?</p>
-<br>
-<p><img style="width: 836px; height: 548px;" alt="" src="images/lintQ4.png"></p>
-<br>
-<p>Multiple indentation issues were encountered in the code and after
-several formating changes no errors are shown. Of course flake 8 does
-not check for logical errors in the code itself. <br>
-</p>
-<br>
-<p><span style="font-weight: bold;">Question 4</span></p>
-<p><span style="font-weight: bold;">U</span>nfortunately it was not possible to run mccabe on codio or locally due to the following error.:<br>
-</p>
-<img style="width: 1158px; height: 381px;" alt="" src="images/mccabe.png">
-<p>However radon was installed and used instead. We can expect tha
-cyclomatic complexity will be identical as both programs contain one if
-statement despite sums2 performing two calculations. Our expectation is
-confirmed by randon calculating the same cc for both files as shown
-below:</p>
-<img style="width: 956px; height: 398px;" alt="" src="images/radon.png"><br>
-<br>
-<p>Question 5</p>
-Today Cyclomatic Complexity is commonly considered in modules on
-testing the validity of code design today. However, in your opinion,
-should it be? Does it remain relevant today? Specific to the focus of
-this module, is it relevant in our quest to develop secure software?
-Justify all opinions which support your argument and share your
-responses with your team.<br>
-<br>
-CC can be a usefule metric but it needs to be considered within the
-context of the code in which it is examined. Other metrics such as
-number of lines of code can also be useful. CC as every such
-methodology can suffer from weaknesses and has been subjected to
-criticism. Some of it most probably stems from the generic difficulty
-of creating a general complexity metric by relying on properties of a
-specific program considering the vast range of programming
-environments, software development methodologies, and programming
-practices in general. To use a simple example , breaking a program into
-different functions can lead to a higher cc score but in reality such
-modularisation might decrease software complexity (Shepperd, 1988).
-This is just an example to show how contested the usage of metrics can
-become. On the other hand and considering such weaknesses such metrics
-can become useful indicators of complexity and potentially used in
-combination with eachother. Consequently, we could say that such
-metrics are still applicable today and they can be used to estimate
-complexity and maintainability but at the same time they should be used
-with an awarenes regarding their limitations. <br>
-<br>
-<span style="font-weight: bold;">References</span><br>
-Shepperd, M. (1988) A critique of cyclomatic complexity as a software metric, Software Engineering Journal 1988<br>
 <p><br>
 </p>
 <p><br>
